@@ -2,17 +2,6 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -24,20 +13,12 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 // New stuff to abstract after POC
+
+.tsl-h1 {
+  background: #333;
+  font-size: 2rem;
+}
 
 .talent-tree {
   border: 1px white solid;
@@ -46,6 +27,7 @@
 
   .talent-path-container {
     .talent-path {
+      // add connectors after all runes except the last one in a path
       &:not(:last-child) {
         margin-bottom: 3rem;
       }
@@ -65,5 +47,9 @@
   .talent-point-counter {
     border: 4px solid blue;
     grid-row: 1 / -1;
+
+    span {
+      display: block;
+    }
   }
 }
