@@ -1,0 +1,81 @@
+// ===========================================================================
+// Colors
+// ===========================================================================
+
+// A note on colors: color variables in this section of the file aren't
+// intended to be used as-is, instead preferring to create specific variables
+// that reference individual colors.
+//
+// e.g., instead of the TalentButton icons directly referencing $blue-three,
+// you will want to create a new variable such as $icon-border-bottom.
+// This way, if another blue ever needs to be added between $blue-two and
+// $blue-three, $blue-three may change to $blue-four, and only references
+// within this file would need change, instead of across the entire project.
+
+// Monochromes ---------------------------------------------------------------
+
+$white-one: #fff; // drop shadow glow effects / misc
+$white-two: #fdfdfd; // text primary
+
+// $gray-one: #4b4b4b; // talent button border background brightest
+$gray-two: #3e3e40; // talent connector border
+$gray-three: #303133; // talent connector background / talent counter border
+// $gray-four: #3a3a3a; // talent button border background darkest
+
+$black-one: #000; // drop shadows / misc
+
+// Note: inactive talent connectors use reduced opacity to darken
+
+// Polychromes ---------------------------------------------------------------
+
+$blue-one: #79a9e3; // active talent button border brightest
+$blue-two: #4e6581; // talent counter label
+$blue-three: #2a394e; // active talent button border darkest
+
+// ===========================================================================
+// Typography
+// ===========================================================================
+
+$font-family-source-sans: "Open Sans", sans-serif;
+$font-weight-medium: normal;
+$font-weight-bold: bold;
+$font-color-primary: $white-two;
+$font-color-secondary: $blue-two;
+
+// ===========================================================================
+// Icons
+// ===========================================================================
+
+$icon-sheet-location: url("/assets/talent-icons-sprite.png");
+$icon-border-top: $blue-one;
+$icon-border-center: $blue-one;
+$icon-border-upper-bottom: $blue-two; // evaluate if this is the right color
+$icon-border-lower-bottom: $blue-three; // evaluate if this is the right color
+$icon-base-size: 50;
+$icon-glow-color: rgba(255, 255, 255, 0.3);
+
+// ===========================================================================
+// Connectors
+// ===========================================================================
+
+$connector-background: $gray-three;
+$connector-border: $gray-two;
+
+// ===========================================================================
+// Breakpoints
+// ===========================================================================
+
+// subject to change based on dev team feedback on responsive requirements
+
+$breakpoint-mobile-small: 320;
+$breakpoint-mobile-mobile: 480;
+$breakpoint-mobile-tablet: 768;
+$breakpoint-mobile-desktop: 1024;
+$breakpoint-mobile-desktop-large: 1200;
+$breakpoint-mobile-desktop-larger: 1800;
+
+// ===========================================================================
+// Z-indexes
+// ===========================================================================
+
+$z-index-connector: -1;

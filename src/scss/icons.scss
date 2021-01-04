@@ -1,0 +1,137 @@
+@import "../../scss/variables.scss";
+
+// ===========================================================================
+// Icons for Talent Buttons
+// ===========================================================================
+
+// Mixins --------------------------------------------------------------------
+
+// A note on @mixins: @mixins are preferred here over the use of @extend,
+// mostly due to the issues @extend can cause with selector bloat
+
+@mixin icon-base {
+  height: $icon-base-size + px;
+  width: $icon-base-size + px;
+}
+
+@mixin icon-image-active {
+  background-position-y: 0px;
+}
+
+@mixin icon-image-inactive {
+  background-position-y: $icon-base-size + px;
+}
+
+// Talent Path 1 Icons -------------------------------------------------------
+
+.icon-chevron {
+  @include icon-base;
+
+  background: $icon-sheet-location 0 0;
+}
+
+.icon-utensils {
+  @include icon-base;
+
+  background: $icon-sheet-location -+ $icon-base-size + px 0;
+}
+
+.icon-cake {
+  @include icon-base;
+
+  background: $icon-sheet-location -100px 0;
+}
+
+.icon-crown {
+  @include icon-base;
+
+  background: $icon-sheet-location -150px 0;
+}
+
+// Talent Path 2 Icons -------------------------------------------------------
+
+.icon-boat {
+  @include icon-base;
+
+  background: $icon-sheet-location -200px 0;
+}
+
+.icon-diver {
+  @include icon-base;
+
+  background: $icon-sheet-location -250px 0;
+}
+
+.icon-lightning {
+  @include icon-base;
+
+  background: $icon-sheet-location -300px 0;
+}
+
+.icon-skull {
+  @include icon-base;
+
+  background: $icon-sheet-location -350px 0;
+}
+
+// Icon wrapper & button -----------------------------------------------------
+// This needs to be moved to TalentButton.scss
+
+.icon-wrapper {
+  height: $icon-base-size + 8px;
+  width: $icon-base-size + 8px;
+  // z-index: 2; // still need this?
+  margin-left: auto;
+  margin-right: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: linear-gradient(
+    180deg,
+    $icon-border-top,
+    $icon-border-center 46%,
+    $icon-border-lower-bottom 50%,
+    $icon-border-upper-bottom
+  );
+
+  // TODO: generalize this
+  &:hover,
+  & .talent-button:hover {
+    cursor: pointer;
+  }
+
+  &.active {
+    box-shadow: 0 0 5px $icon-glow-color;
+    transition: box-shadow 0.6s;
+
+    // if talent is active, show active icon
+    .talent-button {
+      background-position-y: 0px;
+    }
+  }
+
+  // if talent is inactive, desaturate the talent button border
+  &.inactive {
+    filter: grayscale(100%);
+
+    .talent-button {
+      background-position-y: $icon-base-size + px;
+    }
+
+    // if talent is inactive, show inactive icon
+    .talent-button:hover {
+      background-position-y: 0px;
+    }
+  }
+}
+// refactor this out
+.icon-wrapper.inactive.selectable .talent-button:hover {
+  background-position-y: 0px;
+}
+
+.talent-button {
+  padding: 0;
+  border: none;
+}

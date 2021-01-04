@@ -1,11 +1,6 @@
 @import "scss/base.scss";
 
-.tsl-h1 {
-  background: #333;
-  font-size: 2rem;
-}
-
-.talent-tree {
+.talent-wrapper {
   border: 1px white solid;
   display: grid;
   grid-template-rows: 2fr 1fr;
@@ -15,17 +10,6 @@
       // add connectors after all runes except the last one in a path
       &:not(:last-child) {
         margin-bottom: 3rem;
-      }
-
-      .talent-button {
-        height: 5rem;
-        width: 5rem;
-        background: #fff;
-        border: 5px solid green;
-
-        &:not(:last-child) {
-          margin-right: 5rem;
-        }
       }
     }
   }

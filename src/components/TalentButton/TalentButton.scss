@@ -1,0 +1,13 @@
+@import "../../scss/variables.scss";
+@import "../../scss/icons.scss";
+
+.talent-button {
+  // height: 5rem;
+  // width: 5rem;
+  // background: #fff;
+  // border: 5px solid green;
+
+  &:not(:last-child) {
+    margin-right: 5rem;
+  }
+}

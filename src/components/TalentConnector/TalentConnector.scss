@@ -1,0 +1,11 @@
+@import "../../scss/variables.scss";
+
+.talent-connector {
+  height: 100px;
+  width: 16px;
+  margin: -5px auto;
+  z-index: -1;
+  display: block;
+  background: $connector-background;
+  border: $connector-border solid 1px;
+}
