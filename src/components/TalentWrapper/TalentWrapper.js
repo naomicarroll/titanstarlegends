@@ -1,24 +1,25 @@
 import React, { useState } from "react";
 import "./TalentWrapper.scss";
-import { MAX_POINTS } from "../../common/consts";
+import { MAX_POINTS, STARTING_POINTS } from "../../common/consts";
 import { TalentPath } from "../TalentPath/TalentPath";
 import { TalentCounter } from "../TalentCounter/TalentCounter";
 
 export const TalentWrapper = (props) => {
   const [maxPoints, setMaxPoints] = useState(MAX_POINTS);
-  const [availablePoints, setAvailablePoints] = useState(maxPoints);
+  const [startingPoints, setStartingPoints] = useState(STARTING_POINTS);
+  const [spentPoints, setSpentPoints] = useState(startingPoints);
 
   const talentSelect = () => {
-    if (availablePoints >= 1) {
-      setAvailablePoints(availablePoints - 1);
+    if (spentPoints < maxPoints) {
+      setSpentPoints(spentPoints + 1);
     }
   };
 
   const talentDeselect = (e) => {
     e.preventDefault();
 
-    if (availablePoints < maxPoints) {
-      setAvailablePoints(availablePoints + 1);
+    if (spentPoints >= 1) {
+      setSpentPoints(spentPoints - 1);
     }
   };
 
@@ -48,7 +49,7 @@ export const TalentWrapper = (props) => {
         talentDeselect={talentDeselect}
       />
 
-      <TalentCounter maxPoints={maxPoints} availablePoints={availablePoints} />
+      <TalentCounter spentPoints={spentPoints} maxPoints={maxPoints} />
     </div>
   );
 };

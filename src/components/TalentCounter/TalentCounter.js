@@ -3,11 +3,11 @@ import "./TalentCounter.scss";
 
 export const TalentCounter = (props) => {
   const maxPoints = props.maxPoints;
-  const availablePoints = props.availablePoints;
+  const spentPoints = props.spentPoints;
 
   return (
     <div className="talent-counter">
-      {availablePoints}/{maxPoints} <span>Points Spent</span>
+      {spentPoints}/{maxPoints} <span>Points Spent</span>
     </div>
   );
 };
