@@ -1,14 +1,33 @@
+// ===========================================================================
+// Base App Imports
+// ===========================================================================
+
 // Open Sans Google Font import
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
 @import "normalize.css";
 @import "variables.scss";
 
-// Main scaffolding
-* {
+// ===========================================================================
+// Base App Scaffolding
+// ===========================================================================
+
+// The Chris Coyer take of Paul Irish's Box-sizing boilerplate ---------------
+// https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+
+html {
   box-sizing: border-box;
 }
 
-html {
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+// General scaffolding -------------------------------------------------------
+
+html,
+body {
   background: $black-one;
 }
 
@@ -28,7 +47,8 @@ html {
   background-color: #111;
 }
 
-// Typography
+// Typography ----------------------------------------------------------------
+
 .tsl-h1 {
   background: #333;
   font-size: 2rem;

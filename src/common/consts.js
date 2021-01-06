@@ -4,3 +4,5 @@
 
 // Maximum talent points
 const MAX_POINTS = 6;
+
+export { MAX_POINTS };

@@ -1,9 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import "./TalentWrapper.scss";
+import { MAX_POINTS } from "../../common/consts";
 import { TalentPath } from "../TalentPath/TalentPath";
 import { TalentCounter } from "../TalentCounter/TalentCounter";
 
 export const TalentWrapper = (props) => {
+  const [maxPoints, setMaxPoints] = useState(MAX_POINTS);
+  const [availablePoints, setAvailablePoints] = useState(maxPoints);
+
+  const talentSelect = () => {
+    if (availablePoints >= 1) {
+      setAvailablePoints(availablePoints - 1);
+    }
+  };
+
+  const talentDeselect = (e) => {
+    e.preventDefault();
+
+    if (availablePoints < maxPoints) {
+      setAvailablePoints(availablePoints + 1);
+    }
+  };
+
   return (
     <div className="talent-wrapper">
       <TalentPath
@@ -14,6 +32,8 @@ export const TalentWrapper = (props) => {
           "icon-cake",
           "icon-crown",
         ]}
+        talentSelect={talentSelect}
+        talentDeselect={talentDeselect}
       />
 
       <TalentPath
@@ -24,9 +44,11 @@ export const TalentWrapper = (props) => {
           "icon-lightning",
           "icon-skull",
         ]}
+        talentSelect={talentSelect}
+        talentDeselect={talentDeselect}
       />
 
-      <TalentCounter />
+      <TalentCounter maxPoints={maxPoints} availablePoints={availablePoints} />
     </div>
   );
 };

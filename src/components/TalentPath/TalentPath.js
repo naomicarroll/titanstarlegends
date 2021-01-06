@@ -8,13 +8,31 @@ export const TalentPath = (props) => {
     <div className="talent-path">
       <h2>Talent Path {props.talentPathName}</h2>
 
-      <TalentButton talentName={props.talentPathItems[0]} />
+      {/* find cleaner way of passing talentSelect and talentDeselect through to TalentButton */}
+
+      <TalentButton
+        talentName={props.talentPathItems[0]}
+        talentSelect={props.talentSelect}
+        talentDeselect={props.talentDeselect}
+      />
       <TalentConnector />
-      <TalentButton talentName={props.talentPathItems[1]} />
+      <TalentButton
+        talentName={props.talentPathItems[1]}
+        talentSelect={props.talentSelect}
+        talentDeselect={props.talentDeselect}
+      />
       <TalentConnector />
-      <TalentButton talentName={props.talentPathItems[2]} />
+      <TalentButton
+        talentName={props.talentPathItems[2]}
+        talentSelect={props.talentSelect}
+        talentDeselect={props.talentDeselect}
+      />
       <TalentConnector />
-      <TalentButton talentName={props.talentPathItems[3]} />
+      <TalentButton
+        talentName={props.talentPathItems[3]}
+        talentSelect={props.talentSelect}
+        talentDeselect={props.talentDeselect}
+      />
     </div>
   );
 };

@@ -22,7 +22,7 @@
   background-position-y: $icon-base-size + px;
 }
 
-// Talent Path 1 Icons -------------------------------------------------------
+// Talent path 1 icons -------------------------------------------------------
 
 .icon-chevron {
   @include icon-base;
@@ -48,7 +48,7 @@
   background: $icon-sheet-location -150px 0;
 }
 
-// Talent Path 2 Icons -------------------------------------------------------
+// Talent path 2 icons -------------------------------------------------------
 
 .icon-boat {
   @include icon-base;
@@ -126,7 +126,7 @@
     }
   }
 }
-// refactor this out
+// TODO: refactor this out
 .icon-wrapper.inactive.selectable .talent-button:hover {
   background-position-y: 0px;
 }
