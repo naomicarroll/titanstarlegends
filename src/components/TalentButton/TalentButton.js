@@ -11,6 +11,7 @@ export const TalentButton = (props) => {
         className={"talent-button icon-" + props.talentName}
         onClick={talentSelect}
         onContextMenu={talentDeselect}
+        aria-label={props.talentName + " talent"}
       ></button>
     </div>
   );

@@ -29,8 +29,6 @@ export const TalentWrapper = (props) => {
     if (spentPoints < maxPoints) {
       setSpentPoints(spentPoints + 1);
     }
-
-    return this;
   }
 
   function talentDeselect(e) {
@@ -39,16 +37,14 @@ export const TalentWrapper = (props) => {
     if (spentPoints >= 1) {
       setSpentPoints(spentPoints - 1);
     }
-
-    return this;
   }
 
   function getPathTalentIds(talentPathObject) {
     let talentIdList = [];
 
-    talentPathObject.filter((e) => {
-      talentIdList.push(e.talentId);
-    });
+    for (let i = 0; i < talentPathObject.length; i++) {
+      talentIdList.push(talentPathObject[i].talentId);
+    }
 
     return talentIdList;
   }
