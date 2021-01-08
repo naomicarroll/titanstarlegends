@@ -8,7 +8,7 @@ export const TalentButton = (props) => {
   return (
     <div className="icon-wrapper inactive">
       <button
-        className={"talent-button " + props.talentName}
+        className={"talent-button icon-" + props.talentName}
         onClick={talentSelect}
         onContextMenu={talentDeselect}
       ></button>
