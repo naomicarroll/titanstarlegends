@@ -28,28 +28,39 @@ html {
 
 html,
 body {
-  background: $black-one;
+  background-color: $black-one;
 }
 
 .App {
   text-align: center;
+  background-image: url("../assets/talent-calc-bg.png");
+  background-size: cover;
 }
 
 .App-header {
   min-height: 100vh;
+  padding-top: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  // justify-content: center;
   font-size: calc(10px + 2vmin);
   font-family: "Open Sans", sans-serif;
   color: white;
-  background-color: #111;
 }
 
 // Typography ----------------------------------------------------------------
 
-.tsl-h1 {
-  background: #333;
-  font-size: 2rem;
+.h1-wrapper {
+  width: 75%;
+  background: $gray-four;
+
+  .h1 {
+    font-size: 27.7px;
+  }
+}
+
+.h2 {
+  font-size: 14.5px;
+  text-transform: uppercase;
 }

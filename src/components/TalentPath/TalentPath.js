@@ -6,7 +6,7 @@ import { TalentConnector } from "../TalentConnector/TalentConnector";
 export const TalentPath = (props) => {
   return (
     <div className="talent-path">
-      <h2>Talent Path {props.talentPathName}</h2>
+      <h2 className="h2">Talent Path {props.talentPathName}</h2>
 
       {/* This is a good candidate for refactoring to use React's Context API
           to prevent the need of passing down all these props via intermediate

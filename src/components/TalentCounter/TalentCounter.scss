@@ -1,6 +1,12 @@
-.talent-point-counter {
-  border: 4px solid blue;
-  grid-row: 1 / -1;
+@import "../../scss/variables.scss";
+
+.talent-counter {
+  background: rgba($counter-background, 0.5);
+  border: 2px solid $counter-border;
+  padding: 25px;
+  position: absolute;
+  top: 167px;
+  left: 60vw;
 
   span {
     display: block;

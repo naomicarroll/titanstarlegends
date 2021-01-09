@@ -20,7 +20,7 @@ $white-two: #fdfdfd; // text primary
 // $gray-one: #4b4b4b; // talent button border background brightest
 $gray-two: #3e3e40; // talent connector border
 $gray-three: #303133; // talent connector background / talent counter border
-// $gray-four: #3a3a3a; // talent button border background darkest
+$gray-four: #151515; // talent counter background
 
 $black-one: #000; // drop shadows / misc
 
@@ -43,6 +43,13 @@ $font-color-primary: $white-two;
 $font-color-secondary: $blue-two;
 
 // ===========================================================================
+// Counter
+// ===========================================================================
+
+$counter-background: $black-one;
+$counter-border: $gray-four;
+
+// ===========================================================================
 // Icons
 // ===========================================================================
 
@@ -52,7 +59,7 @@ $icon-border-center: $blue-one;
 $icon-border-upper-bottom: $blue-two; // evaluate if this is the right color
 $icon-border-lower-bottom: $blue-three; // evaluate if this is the right color
 $icon-base-size: 50;
-$icon-glow-color: rgba(255, 255, 255, 0.3);
+$icon-glow-color: rgba(255, 255, 255, 0.7);
 
 // ===========================================================================
 // Connectors
